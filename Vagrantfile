@@ -7,8 +7,7 @@ Vagrant.configure("2") do |config|
     benchctrl.vm.box = "ubuntu/trusty64"
     benchctrl.vm.hostname = "hvbench"
 
-    benchctrl.vm.provision :shell, path: "hvbench-ctrl/provision.sh"
-    benchctrl.vm.provision :shell, path: "hvbench-ctrl/provision_user.sh", privileged: false
+    benchctrl.vm.provision :shell, path: "boxes/hvbench-ctrl/provision.sh"
 
     benchctrl.vm.network "private_network", ip: "192.168.34.10"
 
@@ -21,8 +20,7 @@ Vagrant.configure("2") do |config|
     bench.vm.box = "ubuntu/trusty64"
     bench.vm.hostname = "hvbench"
 
-    bench.vm.provision :shell, path: "hvbench/provision.sh"
-    bench.vm.provision :shell, path: "hvbench/provision_user.sh", privileged: false
+    bench.vm.provision :shell, path: "boxes/hvbench/provision.sh"
 
     bench.vm.network "private_network", ip: "192.168.34.11"
 
@@ -35,10 +33,10 @@ Vagrant.configure("2") do |config|
     hv_fv.vm.box = "ubuntu/trusty64"
     hv_fv.vm.hostname = "hv-fv"
 
-    hv_fv.vm.provision :shell, path: "hv_fv/provision.sh"
+    hv_fv.vm.provision :shell, path: "boxes/hv_fv/provision.sh"
+    hv_fv.vm.provision :shell, path: "boxes/hv_fv/provision_user.sh", privileged: false
 
     hv_fv.vm.network "private_network", ip: "192.168.34.12"
-    hv_fv.vm.provision :shell, path: "hv_fv/provision_user.sh", privileged: false
 
     hv_fv.vm.provider "virtualbox" do |vb|
       vb.memory = "1024"
@@ -50,7 +48,7 @@ Vagrant.configure("2") do |config|
     mininet.vm.box = "ubuntu/trusty64"
     mininet.vm.hostname = "mininet"
 
-    mininet.vm.provision :shell, path: "mininet/provision.sh"
+    mininet.vm.provision :shell, path: "boxes/mininet/provision.sh"
 
     mininet.vm.network "private_network", ip: "192.168.34.13"
 

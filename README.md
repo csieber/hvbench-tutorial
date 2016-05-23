@@ -23,6 +23,16 @@ Provision the virtual machines:
 vagrant up
 ```
 
+After you followed one of the tutorials under TUTORIALS, you can destroy the virtual machines with:
+
+```bash
+vagrant destroy
+```
+
+## Tutorials
+
+  - [[Tutorial 1]](Tutorial1.md) Basic switch stresstest without hypervisor
+
 ## Boxes
 
 The following boxes are configured in vagrant:
