@@ -17,7 +17,7 @@ git clone https://github.com/csieber/hvbench-tutorial
 cd hvbench-tutorial
 ```
 
-Provision the virtual machines:
+Provision the virtual machines. This might take a while. A (fast) Internet connection is required for this as additional files have to be downloaded to the virtual machines.
 
 ```bash
 vagrant up
@@ -31,7 +31,7 @@ vagrant destroy
 
 ## Tutorials
 
-  - [[Tutorial 1]](Tutorial1.md) Basic switch stresstest without hypervisor
+  - [[Tutorial 1]](tutorials/Tutorial1.md) Basic switch stresstest without hypervisor
 
 ## Boxes
 
