@@ -12,4 +12,7 @@ apt-get update
 apt-get install -y linux-image-extra-$(uname -r)
 apt-get install -y docker-engine
 
+groupadd -f docker
+usermod -aG docker vagrant
+
 echo "Provision complete (root)"
