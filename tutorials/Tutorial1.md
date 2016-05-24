@@ -5,7 +5,7 @@ In the first tutorial we want to stress-test a single single instance of OpenVSw
 First make sure that the required boxes are reset to default state:
 
 ```bash
-vagrant destroy
+vagrant destroy -f
 vagrant up mininet hvbench hvbench-ctrl
 ```
 

@@ -35,7 +35,7 @@ vagrant destroy
 
 ## Boxes
 
-The following boxes are configured in vagrant:
+The following *Ubuntu 14.04* boxes are used in the tutorial:
 
 | VM           | IP            | Description                              |
 |--------------|---------------|------------------------------------------|
@@ -44,3 +44,17 @@ The following boxes are configured in vagrant:
 | hv\_fv       | 192.168.34.12 | FlowVisor, hvmonitor                     |
 | mininet      | 192.168.34.13 | Mininet                                  |
 
+The following packages are pre-configured on the boxes:
+
+| VM           | Package(s)             | Script                                                                     |
+|--------------|------------------------|----------------------------------------------------------------------------|
+| hvbench-ctrl | docker, docker-compose | see [provision.sh][hvbench-ctrl prov.]                                     |
+| hvbench      | docker                 | see [provision.sh][hvbench prov.]                                          |
+| hv\_fv       | flowVisor              | see [provision.sh][hv_fv prov.] and [provision\_user.sh][hv_fv prov. user] |
+| mininet      | Mininet                | see [provision.sh][mininet prov.]                                          |
+
+[hvbench-ctrl prov.]: boxes/hvbench-ctrl/provision.sh 
+[hvbench prov.]: boxes/hvbench/provision.sh
+[hv_fv prov.]: boxes/hv_fv/provision.sh
+[hv_fv prov. user]: boxes/hv_fv/provision_user.sh
+[mininet prov.]: boxes/mininet/provision.sh
