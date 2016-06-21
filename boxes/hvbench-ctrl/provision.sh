@@ -20,6 +20,6 @@ curl -L https://github.com/docker/compose/releases/download/1.7.1/docker-compose
 chmod +x /usr/local/bin/docker-compose
 
 # Install python3 setuputils
-apt-get install python3-setuptools
+apt-get install -y python3-setuptools
 
 echo "Provision complete (root)"
