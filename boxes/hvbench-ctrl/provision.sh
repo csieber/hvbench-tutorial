@@ -22,4 +22,15 @@ chmod +x /usr/local/bin/docker-compose
 # Install python3 setuputils
 apt-get install -y python3-setuptools
 
+#Preparing the system for Netdata
+apt-get install -y zlib1g-dev uuid-dev libmnl-dev gcc make git autoconf autogen automake pkg-config
+
+# Install netdata- https://github.com/firehol/netdata/wiki/Installation
+# Download it - the directory 'netdata' will be created
+git clone https://github.com/firehol/netdata.git --depth=1
+cd netdata
+
+# build it, install it, start it
+./netdata-installer.sh
+
 echo "Provision complete (root)"
