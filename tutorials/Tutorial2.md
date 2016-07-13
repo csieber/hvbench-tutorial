@@ -91,6 +91,7 @@ Apply a VLAN slicing to all datapaths:
 
 ```bash
 fvctl -n add-flowspace space1 all 1 dl_vlan=1 slice1=7
+```
 
 **Note**: You should see now echo requests in the mininet *ovs-ofctl snoop* output
 
