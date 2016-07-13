@@ -26,12 +26,13 @@ vagrant up
 After you followed one of the tutorials under TUTORIALS, you can destroy the virtual machines with:
 
 ```bash
-vagrant destroy
+vagrant destroy -f
 ```
 
 ## Tutorials
 
-  - [[Tutorial 1]](tutorials/Tutorial1.md) Basic switch stresstest without hypervisor
+- [[Tutorial 1]](tutorials/Tutorial1.md) Basic switch stresstest without hypervisor
+- [[Tutorial 2]](tutorials/Tutorial2.md) Using hvbench with FlowVisor, hvmonitor, hvbench-log and netdata-plugin
 
 ## Boxes
 
