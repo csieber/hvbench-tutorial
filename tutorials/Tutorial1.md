@@ -65,7 +65,7 @@ docker ps
 Afterwards add a tenant to that instance using *add-tenant*. *add-tenant* will, by default, create a constant generator of type ECHO_REQUEST, add the tenant to instance 1 and will tell it to listen on the OpenFlow default port 6633.
 
 ```bash
-hvbench-ctrl add-tentant tutorial
+hvbench-ctrl add-tenant tutorial
 ```
 
 Now you should see a constant rate of ECHO_REQUEST messages in the *ovs-ofctl* output.
