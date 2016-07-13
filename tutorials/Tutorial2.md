@@ -107,6 +107,54 @@ hvbench-ctrl add-tenant tutorial
 
 **Note** You will *not* see the ECHO requests sent by hvbench on the mininet *ovs-ofctl snoop* output. FlowVisor intercepts those requests.
 
+You now have an active tenant sending messages to the hypervisor. Furthermore, the current message rates are sent to the kafka topic *hvbench*.
+
 ## Use hvmonitor to monitor FlowVisor resource usage
 
+ssh into the FlowVisor machine and clone hvmonitor:
+
+```
+vagrant ssh hv-fv
+git clone https://github.com/csieber/hvmonitor
+```
+
+Use install to make sure all required packages are there:
+
+```
+cd hvmonitor
+python3 setup.py install
+```
+
+You can now start hvmonitor to check if it properly recognizes the hypervisor:
+
+```
+python3 hvmonitor.py
+```
+
+Afterwards use Control+C to stop the hvmonitor and start it with kafka output again:
+
+```
+python3 hvmonitor.py -k -ka 192.168.34.10
+```
+
+## Use hvbench-log to record hvbench and hvmonitor output
+
+We can now use hvbench-log to record the message rates send by hvbench and the resource usage send by hvmonitor.
+
+ssh into the hvbench-ctrl machine and start hvbench-log
+
+```
+vagrant ssh hvbench-ctrl
+hvbench-log
+```
+
+*hvbench-log* will automatically create a folder out/ in the current directory which contains the default study folder. In this folder, you can find the hvmonitor.csv and hvbench.csv log files.
+
+From a different ssh session you can tail the log entries:
+
+```
+vagrant ssh hvbench-ctrl
+cd out/default
+tail -f hvbench.csv hvmonitor.csv
+```
 
