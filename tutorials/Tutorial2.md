@@ -8,7 +8,7 @@ First make sure that the required boxes are reset to default state:
 
 ```bash
 vagrant destroy -f
-vagrant up mininet hvbench hv_fv hvbench-ctrl
+vagrant up mininet hvbench hv-fv hvbench-ctrl
 ```
 
 ## Mininet
