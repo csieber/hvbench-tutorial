@@ -10,8 +10,8 @@ make
 
 sudo adduser --system --disabled-login flowvisor --group
 
-echo "Almost finished .. please execute the following command on your own now:"
-echo "sudo make fvuser=flowvisor fvgroup=flowvisor install"
+# Install FlowVisor with default values
+yes "" | sudo make fvuser=flowvisor fvgroup=flowvisor install
 
 echo "Installation (user) complete!"
 

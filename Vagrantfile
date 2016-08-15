@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
     benchctrl.vm.network "private_network", ip: "192.168.34.10"
 
     benchctrl.vm.provider "virtualbox" do |vb|
-      vb.memory = "1024"
+      vb.memory = "1500"
     end
   end
 
