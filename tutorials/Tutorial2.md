@@ -123,7 +123,7 @@ Use install to make sure all required packages are there:
 
 ```
 cd hvmonitor
-python3 setup.py install
+sudo python3 setup.py install
 ```
 
 You can now start hvmonitor to check if it properly recognizes the hypervisor:
