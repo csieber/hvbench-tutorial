@@ -38,8 +38,8 @@ cd hvbench
 docker-compose up -d
 ```
 
-**Note**: You can remove the *-d* to run docker in foreground and see the kafka/etcd output if there is a problem. 
-**Note**: If you previously started and stopped the container, you may encounter problems with kafka/zookeeper. Use *docker ps -a* to get the IDs of the previously started containers and remove them with *docker rm*.
+  - **Note**: You can remove the *-d* to run docker in foreground and see the kafka/etcd output if there is a problem. 
+  - **Note**: If you previously started and stopped the container, you may encounter problems with kafka/zookeeper. Use *docker ps -a* to get the IDs of the previously started containers and remove them with *docker rm*.
 
 Install the hvbench-api:
 
