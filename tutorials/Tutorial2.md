@@ -192,10 +192,11 @@ This file significantly reduces the resources consumed by netdata. Reduced resou
 
 Now, you can go to your browser and see your charts here: http://192.168.34.10:19999/index.html
 
-If you see that a chart is not displayed, just referesh the tab. This is because we have change the settings in the conf file to lower the memory requirements (i.e. when we add new charts during execution of the plugin). 
+If you see that a chart is not displayed, just referesh the tab. This is because we have changed the settings in the conf file to lower the memory requirements (i.e. when we add new charts during execution of the plugin). 
 
 
 Notes:
-1) Netdata is a real-time performance monitoring solution. You can read here about it, in detail: https://github.com/firehol/netdata/wiki
+
+1) Netdata is a real-time performance monitoring solution. You can read about it, in detail, here: https://github.com/firehol/netdata/wiki
 
 2) This is the first version of netdata-plugin, to get you started. It can be significantly improved. Feel free to modify it according to your need.
