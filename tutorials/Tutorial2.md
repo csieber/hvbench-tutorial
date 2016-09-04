@@ -196,6 +196,6 @@ If you see that a chart is not displayed, just referesh the tab. This is because
 
 
 Notes:
-1. Netdata is a real-time performance monitoring solution. You can read here about it, in detail: https://github.com/firehol/netdata/wiki
+1) Netdata is a real-time performance monitoring solution. You can read here about it, in detail: https://github.com/firehol/netdata/wiki
 
-2. This is the first version of netdata-plugin, to get you started. It can be significantly improved. Feel free to modify it according to your need.
+2) This is the first version of netdata-plugin, to get you started. It can be significantly improved. Feel free to modify it according to your need.
