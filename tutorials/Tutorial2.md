@@ -165,13 +165,13 @@ We can now use netdata-plugin to create charts for the CPU utilization of hvmoni
 
 ssh into the hvbench-ctrl machine and perform the following steps:
 
-1. Copy our custom netdata-plugin into netdata's plugin directory:
+1) Copy our custom netdata-plugin into netdata's plugin directory:
 ```
 vagrant ssh hvbench-ctrl
 cd hvbench-api
 sudo cp *.plugin /usr/libexec/netdata/plugins.d/
 ```
-2. Configure netdata so that it only shows the data from our custom netdata plugin. Copy our custom Netdata Configuration File to this directory:
+2) Configure netdata so that it only shows the data from our custom netdata plugin. Copy our custom Netdata Configuration File to this directory:
 ```
 sudo cp netdata.conf /etc/netdata/
 sudo killall netdata
