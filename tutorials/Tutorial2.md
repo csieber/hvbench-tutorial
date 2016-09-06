@@ -162,7 +162,7 @@ tail -f hvbench.csv hvmonitor.csv
 
 ## Use netdata-plugin to visualize hvbench and hvmonitor output
 
-We can now use netdata-plugin to create charts for the CPU utilization of hvmonitor, Number of tenants in the current study and Total numeber of Messages per tenant. 
+We can now use netdata-plugin to create charts for the CPU utilization of hvmonitor, number of tenants in the current study and total number of messages per tenant. 
 
 ssh into the hvbench-ctrl machine and perform the following steps:
 
@@ -172,14 +172,14 @@ vagrant ssh hvbench-ctrl
 cd hvbench-api
 sudo cp *.plugin /usr/libexec/netdata/plugins.d/
 ```
-2) Configure netdata so that it only shows the data from our custom netdata plugin. Copy our custom Netdata Configuration File to this directory:
+2) Configure netdata so that it only shows the data from our custom netdata plugin. Copy our custom Netdata configuration file to this directory:
 ```
 sudo cp netdata.conf /etc/netdata/
 sudo killall netdata
 sudo /usr/sbin/netdata
 ```
 Perform step two, in hvbench-api folder (netdata.conf file is placed there.).
-We kill all current plugins and then restart the netdata so that it loads our custom Netdata Configuration File.
+We kill all current plugins and then restart the netdata so that it loads our custom Netdata configuration file.
 
 This file significantly reduces the resources consumed by netdata. Reduced resource consumption is achieved by:
 
