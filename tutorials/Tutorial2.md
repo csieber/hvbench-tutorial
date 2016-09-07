@@ -169,7 +169,8 @@ ssh into the hvbench-ctrl machine and perform the following steps:
 1) Copy our custom netdata-plugin into netdata's plugin directory:
 ```
 vagrant ssh hvbench-ctrl
-cd hvbench-api
+git clone https://github.com/csieber/hvbench-netdata-plugin.git
+cd hvbench-netdata-plugin
 sudo cp *.plugin /usr/libexec/netdata/plugins.d/
 ```
 2) Configure netdata so that it only shows the data from our custom netdata plugin. Copy our custom Netdata configuration file to this directory:
